@@ -31,7 +31,7 @@ const createStore = (reducer, preloadedState = {}) => {
 combineReducers({
   somePage: (state, action) => state,
   nested: combineReducers({
-    deep1: (state, action) => astate
+    deep1: (state, action) => state
   })
 });
 
