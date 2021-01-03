@@ -38,9 +38,8 @@ combineReducers({
 // you call it inside the each module, when difine it
 const combineReducers = reducers => {
   return (state = {}, action) => {
-    return Object.keys(reducers).reduce(
-      nextState,
-      key => {
+    // prettier-ignore
+    return Object.keys(reducers).reduce(nextState, key => {
         nextState[key] = reducers[key](state[key], action);
 
         return nextState;
