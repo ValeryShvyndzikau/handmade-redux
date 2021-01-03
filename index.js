@@ -29,7 +29,10 @@ const createStore = (reducer, preloadedState = {}) => {
 };
 
 combineReducers({
-  somePage: (state, action) => action
+  somePage: (state, action) => state,
+  nested: combineReducers({
+    deep1: (state, action) => astate
+  })
 });
 
 // you call it inside the each module, when difine it
